@@ -1,0 +1,116 @@
+html{
+    scroll-behavior: smooth;
+}
+
+/* Base styles */
+body {
+    font-family: Arial, sans-serif; /* Clean and modern font */
+    line-height: 1.6; /* Improved readability */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-color: #f0f0f0; /* Light background color for contrast */
+    color: #333; /* Dark text color */
+}
+
+/* Header styles */
+header {
+    background-color: #4CAF50; /* Green background for the header */
+    color: white; /* White text color */
+    padding: 20px; /* Spacing around header content */
+    text-align: center; /* Center-align the header text */
+}
+
+/* Main styles */
+main {
+    padding: 20px; /* Spacing around main content */
+}
+
+/* Paragraph styles */
+p {
+    margin-bottom: 20px; /* Space between paragraphs */
+}
+
+/* Grid styles */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr; /* One column grid for mobile */
+    gap: 10px; /* 10px gap between rows and columns */
+}
+
+/* Figure styles */
+figure {
+    border: 2px solid #4CAF50; /* Green border around figures */
+    border-radius: 50%; /* Circular shape for figures */
+    overflow: hidden; /* Hide overflow for circular shape */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+    text-align: center; /* Center-align caption text */
+}
+
+figure:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+figure img {
+    width: 100%; /* Responsive image width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Tablet view */
+@media (min-width: 772px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr); /* Two column grid */
+    }
+
+    figure:last-child {
+        grid-column: span 2; /* Last figure takes up both columns */
+    }
+}
+
+/* Large screen view */
+@media (min-width: 992px) {
+    figure:nth-child(3n) {
+        grid-column: span 2; /* Every third figure takes up both columns */
+    }
+
+    figure {
+        border-radius: 0; /* Remove border radius from all figures */
+    }
+}
+
+/* Prefers-reduced-motion media query */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto; /* Remove scroll behavior */
+    }
+}
+
+/* Dark color scheme */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #333; /* Dark background color for body */
+        color: #fff; /* Light text color */
+    }
+
+    figure {
+        background-color: #444; /* Dark background color for figures */
+        color: #ffeb3b; /* Lighter font color (yellow-ish) */
+        border-color: black; /* Border color set to black */
+    }
+}
+
+/* Footer styles */
+footer {
+    background-color: #4CAF50; /* Green background for the footer */
+    color: white; /* White text color */
+    text-align: center; /* Center-align footer text */
+    padding: 10px; /* Spacing around footer content */
+}
+
+footer a {
+    color: white; /* White link color */
+    text-decoration: none; /* Remove underline from links */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Underline on hover for links */
+}
